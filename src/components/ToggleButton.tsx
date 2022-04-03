@@ -35,7 +35,7 @@ export default function Toggle() {
           <div className="toggle-text m-[21px] opacity-50">LESS</div>
           <div className="absolute right-2 transition-all">
             <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd">
+              <g fill="none" fillRule="evenodd">
                 <circle
                   className=" group-hover:fill-hover"
                   fill="#303030"
@@ -43,7 +43,7 @@ export default function Toggle() {
                   cy="20"
                   r="20"
                 />
-                <path stroke="#FFF" stroke-width="2" d="M14 23l6-6 6 6" />
+                <path stroke="#FFF" strokeWidth="2" d="M14 23l6-6 6 6" />
               </g>
             </svg>
           </div>
