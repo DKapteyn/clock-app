@@ -5,24 +5,30 @@ export const Quote = () => {
     author: "",
     en: "",
   });
+  const [update, setUpdate] = useState(false);
+
+  function getUpdate() {
+    setUpdate(!update);
+  }
 
   useEffect(() => {
     const timeApi =
       "https://programming-quotes-api.herokuapp.com/Quotes/random";
 
-    const fetchtime = async (url: any): Promise<any> => {
+    const fetchTime = async (url: any): Promise<any> => {
       const res = await fetch(url);
       const quoteinfo = await res.json();
       setQuoteData(quoteinfo);
     };
-    fetchtime(timeApi);
-  }, []);
+    fetchTime(timeApi);
+  }, [update]);
   return (
-    <div className="h-[400px] w-screen pt-14 pl-[165px] text-white">
+    <div className="h-1/2  m-auto w-[1110px] pt-14  text-white">
       <div className="flex">
         <div className="body-text w-[540px]">{quoteData.en}</div>
         <img
-          className="self-start pt-[8px]   "
+          onClick={() => getUpdate()}
+          className="self-start pt-[8px]"
           src="\assets\desktop\icon-refresh.svg"
           alt="refresh symbol"
         />

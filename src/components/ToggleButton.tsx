@@ -1,8 +1,6 @@
-import { useState } from "react";
+import { openProps } from "../App";
 
-export default function Toggle() {
-  const [open, setOpen] = useState(false);
-
+export default function Toggle({ open, setOpen }: openProps) {
   return (
     <>
       {open === false ? (
@@ -10,7 +8,7 @@ export default function Toggle() {
           onClick={() => setOpen(!open)}
           className="group h-14 w-[146px] bg-white rounded-full flex relative items-center"
         >
-          <div className="toggle-text m-[21px] opacity-50">MORE</div>
+          <div className="toggle-text m-[21px] text-black opacity-50">MORE</div>
           <div className="absolute right-2 rotate-180 transition-all">
             <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
               <g fill="none" fillRule="evenodd">
@@ -32,7 +30,7 @@ export default function Toggle() {
           onClick={() => setOpen(!open)}
           className="group h-14 w-[146px] bg-white rounded-full flex relative items-center"
         >
-          <div className="toggle-text m-[21px] opacity-50">LESS</div>
+          <div className="toggle-text m-[21px] text-black opacity-50">LESS</div>
           <div className="absolute right-2 transition-all">
             <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
               <g fill="none" fillRule="evenodd">
