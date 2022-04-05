@@ -23,7 +23,7 @@ export const Quote = () => {
     fetchTime(timeApi);
   }, [update]);
   return (
-    <div className="h-1/2  m-auto w-[1110px] pt-14  text-white">
+    <div className="h-1/2  m-auto w-[1110px] pt-14  text-white transition-all">
       <div className="flex">
         <div className="body-text w-[540px]">{quoteData.en}</div>
         <img

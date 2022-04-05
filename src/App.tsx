@@ -28,6 +28,8 @@ export type openProps = {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
+export type hour = { hour: number };
+
 function App() {
   const [dateData, setDateData] = useState<mainPropsDate & moreInfoDateProps>({
     datetime: "",
@@ -41,6 +43,7 @@ function App() {
     mainPropsPlace & moreInfoPlaceProps
   >({ city: "", country_name: "", time_zone: "" });
   const [open, setOpen] = useState(false);
+
   useEffect(() => {
     const timeAndLocationUrls: any = [
       "http://worldtimeapi.org/api/ip",
@@ -63,9 +66,21 @@ function App() {
     return () => clearInterval(interval);
   },*/
   }, []);
+  const hour = 17; // Number(dateData.datetime.substring(11, 13));
+
+  const backgroundImage =
+    hour > 5 && hour <= 18
+      ? "bg-[url('./backgroundimage/bg-image-daytime.jpg')]"
+      : hour > 18 || hour < 5
+      ? "bg-[url('./backgroundimage/bg-image-nighttime.jpg')]"
+      : null;
 
   return (
-    <div className="h-screen w-screen bg-[url('./backgroundimage/bg-image-daytime.jpg')]  bg-no-repeat bg-cover bg-opacity-80  ">
+    <div
+      className={`h-screen w-screen  bg-no-repeat bg-cover bg-opacity-80 ${backgroundImage}
+      
+      `}
+    >
       <div className="bg-black bg-opacity-20 h-screen w-screen">
         {open === false && <Quote />}
         <MainPage
@@ -75,6 +90,7 @@ function App() {
           country_name={placeData.country_name}
           open={open}
           setOpen={setOpen}
+          hour={hour}
         />
         {open === true && (
           <MoreInfo
@@ -82,6 +98,7 @@ function App() {
             day_of_week={dateData.day_of_week}
             day_of_year={dateData.day_of_year}
             week_number={dateData.week_number}
+            hour={hour}
           />
         )}
       </div>
