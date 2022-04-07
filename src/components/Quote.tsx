@@ -23,17 +23,23 @@ export const Quote = () => {
     fetchTime(timeApi);
   }, [update]);
   return (
-    <div className="h-1/2  m-auto w-[1110px] pt-14  text-white transition-all">
-      <div className="flex">
-        <div className="body-text w-[540px]">{quoteData.en}</div>
-        <img
-          onClick={() => getUpdate()}
-          className="self-start pt-[8px]"
-          src="\assets\desktop\icon-refresh.svg"
-          alt="refresh symbol"
-        />
+    <div className="h-1/2 w-screen pt-14  text-white transition-all flex justify-center">
+      <div className=" lg:w-[573px] lg:mr-[527px] ">
+        <div className="flex">
+          <div className="body-text md:body-text-md md:w-[540px] w-[290px]">
+            {quoteData.en}
+          </div>
+          <img
+            onClick={() => getUpdate()}
+            className="self-start pt-[6px] md:pt-[8px]"
+            src="\assets\desktop\icon-refresh.svg"
+            alt="refresh symbol"
+          />
+        </div>
+        <span className=" font-bold body-text  md:H5-text mt-3 w-5 ">
+          {quoteData.author}
+        </span>
       </div>
-      <div className="H5-text mt-3">{quoteData.author}</div>
     </div>
   );
 };

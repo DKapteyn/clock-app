@@ -66,7 +66,7 @@ function App() {
     return () => clearInterval(interval);
   },*/
   }, []);
-  const hour = 17; // Number(dateData.datetime.substring(11, 13));
+  const hour = 19; // Number(dateData.datetime.substring(11, 13));
 
   const backgroundImage =
     hour > 5 && hour <= 18

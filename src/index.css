@@ -1,59 +1,87 @@
 @tailwind base;
 @tailwind components;
 
-.body-text {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-}
-.H1-text {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-size: 200px;
-  line-height: 200px;
-  letter-spacing: -5px;
-}
-.H2-text {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 68px;
-}
-.H3-text {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  letter-spacing: 4.8px;
-}
-.H4-text {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: 4px;
-}
-.H5-text {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 28px;
-}
-.H6-text {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 28px;
-  letter-spacing: 3px;
-}
-
-.toggle-text {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: 5px;
-}
-
 @tailwind utilities;
+
+@layer utilities {
+  .body-text {
+    font-family: "Inter";
+    font-style: normal;
+
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .body-text-md {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .time-text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 100px;
+    letter-spacing: -2.5px;
+  }
+
+  .abr {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 28px;
+  }
+  .H2-text {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 68px;
+  }
+  .H3-text {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 4.8px;
+  }
+  .H4-text {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 4px;
+  }
+  .H5-text {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .H6-text {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 3px;
+  }
+
+  .toggle-text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 3.75px;
+  }
+
+  .toggle-text-lg {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 5px;
+  }
+}

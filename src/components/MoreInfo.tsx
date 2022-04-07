@@ -27,26 +27,26 @@ export function MoreInfo({
       <div className="w-[1100px] h-[252px] flex  ">
         <div className="w-[570px]">
           <div>
-            <h6 className="H6-text mb-[9px]">CURRENT TIMEZONE</h6>
-            <h2 className="H2-text mb-[42px]">{time_zone}</h2>
+            <p className="H6-text mb-[9px]">CURRENT TIMEZONE</p>
+            <p className="H2-text mb-[42px]">{time_zone}</p>
           </div>
           <div>
-            <h6 className="H6-text mb-[9px]">DAY OF THE WEEK</h6>
-            <h2 className="H2-text ">{day_of_week}</h2>
+            <p className="H6-text mb-[9px]">DAY OF THE WEEK</p>
+            <p className="H2-text ">{day_of_week}</p>
           </div>
         </div>
         <div
           className={`border-l-[1px] border-opacity-25 ${borderColorChange}`}
         >
           <div className="ml-[95px] ">
-            <h6 className="H6-text mb-[9px]">DAY OF THE YEAR</h6>
-            <h2 className="H2-text mb-[42px]">{day_of_year}</h2>
+            <p className="H6-text mb-[9px]">DAY OF THE YEAR</p>
+            <p className="H2-text mb-[42px]">{day_of_year}</p>
           </div>
           <div className="ml-[95px]">
-            <h6 className="H6-text mb-[9px]">
+            <p className="H6-text mb-[9px]">
               WEEK NUMBER
-              <h2 className="H2-text">{week_number}</h2>
-            </h6>
+              <p className="H2-text">{week_number}</p>
+            </p>
           </div>
         </div>
       </div>
