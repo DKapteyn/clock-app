@@ -59,27 +59,33 @@ function App() {
       console.log("time", data[0], "place", data[1]);
     };
     fetchAll(timeAndLocationUrls);
-
-    /* const interval = setInterval(() => {
-      fetchAll(apiUrls);
-    }, 7000);
-    return () => clearInterval(interval);
-  },*/
   }, []);
-  const hour = 19; // Number(dateData.datetime.substring(11, 13));
-
-  const backgroundImage =
+  const hour = Number(dateData.datetime.substring(11, 13));
+  //added tailwind breakpoint prefixes into the constant to control breakpoints
+  const backgroundImageLarge =
     hour > 5 && hour <= 18
-      ? "bg-[url('./backgroundimage/bg-image-daytime.jpg')]"
+      ? "lg:bg-[url('./backgroundImage/bg-image-daytime.jpg')]"
       : hour > 18 || hour < 5
-      ? "bg-[url('./backgroundimage/bg-image-nighttime.jpg')]"
+      ? "lg:bg-[url('./backgroundImage/bg-image-nighttime.jpg')]"
+      : null;
+
+  const backgroundImageMedium =
+    hour > 5 && hour <= 18
+      ? "md:bg-[url('./backgroundImage/tablet-bg-image-daytime.jpg')]"
+      : hour > 18 || hour < 5
+      ? "md:bg-[url('./backgroundImage/tablet-bg-image-nighttime.jpg')]"
+      : null;
+
+  const backgroundImageSmall =
+    hour > 5 && hour <= 18
+      ? "bg-[url('./backgroundImage/mobile-bg-image-daytime.jpg')]"
+      : hour > 18 || hour < 5
+      ? "bg-[url('./backgroundImage/mobile-bg-image-nighttime.jpg')]"
       : null;
 
   return (
     <div
-      className={`h-screen w-screen  bg-no-repeat bg-cover bg-opacity-80 ${backgroundImage}
-      
-      `}
+      className={`h-screen w-screen  bg-no-repeat bg-cover bg-opacity-80 ${backgroundImageLarge} ${backgroundImageMedium} ${backgroundImageSmall}`}
     >
       <div className="bg-black bg-opacity-20 h-screen w-screen">
         {open === false && <Quote />}

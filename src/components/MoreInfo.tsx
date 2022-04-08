@@ -22,30 +22,45 @@ export function MoreInfo({
       : null;
   return (
     <div
-      className={`h-1/2 w-screen flex  items-center justify-center bg-opacity-75 ${colorChange}`}
+      className={`h-1/2 w-screen flex  items-center bg-opacity-75 justify-center pr-[26px] pl-[26px] md:p-0  ${colorChange}`}
     >
-      <div className="w-[1100px] h-[252px] flex  ">
-        <div className="w-[570px]">
-          <div>
-            <p className="H6-text mb-[9px]">CURRENT TIMEZONE</p>
-            <p className="H2-text mb-[42px]">{time_zone}</p>
+      <div className="lg:w-[1100px] lg:h-[252px] md:w-[538px] md:mr-9 md:h-[202px] md:flex w-screen gap-4 grid ">
+        <div className="gap-4 grid">
+          <div className="flex justify-between md:inline ">
+            <div className=" moreInfoTitle-text lg:mb-[9px] md:text-[13px] md:tracking-[2.6px] lg:text-[15px] lg:tracking-[3px] ">
+              CURRENT TIMEZONE
+            </div>
+            <div className="moreInfoInfo-text md:mb-[42px] md:text-[40px] md:leading-[48.41px] lg:text-[56px] lg:leading-[67.77px]">
+              {time_zone}
+            </div>
           </div>
-          <div>
-            <p className="H6-text mb-[9px]">DAY OF THE WEEK</p>
-            <p className="H2-text ">{day_of_week}</p>
+          <div className="flex justify-between md:inline ">
+            <p className="moreInfoTitle-text lg:mb-[9px] md:text-[13px] md:tracking-[2.6px] lg:text-[15px] lg:tracking-[3px]">
+              DAY OF THE WEEK
+            </p>
+            <p className="moreInfoInfo-text md:text-[40px] md:leading-[48.41px] lg:text-[56px] lg:leading-[67.77px]">
+              {day_of_week}
+            </p>
           </div>
         </div>
         <div
-          className={`border-l-[1px] border-opacity-25 ${borderColorChange}`}
-        >
-          <div className="ml-[95px] ">
-            <p className="H6-text mb-[9px]">DAY OF THE YEAR</p>
-            <p className="H2-text mb-[42px]">{day_of_year}</p>
+          className={`lg:inline hidden border-l-[1px] w-[1px] border-opacity-25 ${borderColorChange}`}
+        ></div>
+        <div className="gap-4 grid">
+          <div className=" lg:ml-[95px] flex justify-between md:inline ">
+            <p className="moreInfoTitle-text lg:mb-[9px] md:text-[13px] md:tracking-[2.6px] w-max lg:text-[15px] lg:tracking-[3px]">
+              DAY OF THE YEAR
+            </p>
+            <p className="moreInfoInfo-text md:mb-[42px] md:text-[40px] md:leading-[48.41px] lg:text-[56px] lg:leading-[67.77px]">
+              {day_of_year}
+            </p>
           </div>
-          <div className="ml-[95px]">
-            <p className="H6-text mb-[9px]">
+          <div className=" lg:ml-[95px] flex justify-between md:inline ">
+            <p className="moreInfoTitle-text lg:mb-[9px] md:text-[13px] md:tracking-[2.6px] lg:text-[15px] lg:tracking-[3px] ">
               WEEK NUMBER
-              <p className="H2-text">{week_number}</p>
+            </p>
+            <p className="moreInfoInfo-text md:text-[40px] md:leading-[48.41px] lg:text-[56px] lg:leading-[67.77px]">
+              {week_number}
             </p>
           </div>
         </div>

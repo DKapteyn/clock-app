@@ -34,11 +34,11 @@
     font-size: 15px;
     line-height: 28px;
   }
-  .H2-text {
+  .moreInfoInfo-text {
     font-family: "Inter", sans-serif;
     font-weight: 700;
-    font-size: 56px;
-    line-height: 68px;
+    font-size: 20px;
+    line-height: 24.2px;
   }
   .H3-text {
     font-family: "Inter", sans-serif;
@@ -60,12 +60,12 @@
     font-size: 18px;
     line-height: 28px;
   }
-  .H6-text {
+  .moreInfoTitle-text {
     font-family: "Inter", sans-serif;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 10px;
     line-height: 28px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
   }
 
   .toggle-text {

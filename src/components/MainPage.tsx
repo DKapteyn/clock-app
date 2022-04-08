@@ -20,7 +20,7 @@ export const MainPage = ({
       : "EVENING";
 
   return (
-    <div className="flex h-1/2 items-center justify-center text-white ">
+    <div className="flex h-1/2 items-center justify-center text-white  ">
       <div className=" lg:h-[288px] lg:w-[1110px] lg:mr-0 md:w-[499px] md:mr-[74px] md:h-[367px] h-[267px] w-[278px]">
         <div className="flex items-center mb-4 md:mb-0">
           {hour >= 5 && hour < 18 ? (

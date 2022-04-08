@@ -26,7 +26,7 @@ export const Quote = () => {
     <div className="h-1/2 w-screen pt-14  text-white transition-all flex justify-center">
       <div className=" lg:w-[573px] lg:mr-[527px] ">
         <div className="flex">
-          <div className="body-text md:body-text-md md:w-[540px] w-[290px]">
+          <div className="body-text md:body-text-md  md:w-[540px] w-[290px]">
             {quoteData.en}
           </div>
           <img
