@@ -18,8 +18,6 @@ The user has the ability to look for more information about their date and time 
   - Tailwind
   - HTML5
 
-&ensp;
 
-### Note:
 
-This app needs be opened using a development server due CORS issues with the APIs
+
