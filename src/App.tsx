@@ -2,33 +2,12 @@ import { useEffect, useState } from "react";
 import { MainPage } from "./components/MainPage";
 import { Quote } from "./components/Quote";
 import { MoreInfo } from "./components/MoreInfo";
-
-export type mainPropsDate = {
-  datetime: string;
-  abbreviation: string;
-};
-
-export type mainPropsPlace = {
-  city: string;
-  country_name: string;
-};
-
-export type moreInfoPlaceProps = {
-  time_zone: string;
-};
-
-export type moreInfoDateProps = {
-  day_of_week: string;
-  day_of_year: string;
-  week_number: string;
-};
-
-export type openProps = {
-  open: boolean;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-export type hour = { hour: number };
+import {
+  mainPropsDate,
+  moreInfoDateProps,
+  mainPropsPlace,
+  moreInfoPlaceProps,
+} from "./type";
 
 function App() {
   const [dateData, setDateData] = useState<mainPropsDate & moreInfoDateProps>({
@@ -41,13 +20,13 @@ function App() {
 
   const [placeData, setPlaceData] = useState<
     mainPropsPlace & moreInfoPlaceProps
-  >({ city: "", country_name: "", time_zone: "" });
+  >({ city: "", country_name: "", time_zone: { name: "" } });
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const timeAndLocationUrls: any = [
       "http://worldtimeapi.org/api/ip",
-      "https://api.freegeoip.app/json/?apikey=4f749390-b025-11ec-b0f1-39b9d0fe6f47",
+      "https://api.ipgeolocation.io/ipgeo?apiKey=213d5577c1fd450a8f664fa852e26c49",
     ];
 
     const fetchAll = async (urls: any) => {
@@ -100,7 +79,7 @@ function App() {
         />
         {open === true && (
           <MoreInfo
-            time_zone={placeData.time_zone}
+            name={placeData.time_zone.name}
             day_of_week={dateData.day_of_week}
             day_of_year={dateData.day_of_year}
             week_number={dateData.week_number}

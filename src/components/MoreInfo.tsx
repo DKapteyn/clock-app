@@ -1,12 +1,12 @@
-import { moreInfoDateProps, moreInfoPlaceProps, hour } from "../App";
+import { moreInfoDateProps, hour, name } from "../type";
 
 export function MoreInfo({
-  time_zone,
+  name,
   day_of_week,
   day_of_year,
   week_number,
   hour,
-}: moreInfoPlaceProps & moreInfoDateProps & hour) {
+}: moreInfoDateProps & hour & name) {
   const colorChange =
     hour > 5 && hour <= 18
       ? "text-black bg-white"
@@ -22,7 +22,7 @@ export function MoreInfo({
       : null;
   return (
     <div
-      className={`h-1/2 w-screen flex  items-center bg-opacity-75 justify-center pr-[26px] pl-[26px] md:p-0  ${colorChange}`}
+      className={`h-1/2 w-screen flex  items-center bg-opacity-75 justify-center pr-[26px] pl-[26px] md:p-0 mt-2 ${colorChange}`}
     >
       <div className="lg:w-[1100px] lg:h-[252px] md:w-[538px] md:mr-9 md:h-[202px] md:flex w-screen gap-4 grid ">
         <div className="gap-4 grid">
@@ -31,7 +31,7 @@ export function MoreInfo({
               CURRENT TIMEZONE
             </div>
             <div className="moreInfoInfo-text md:mb-[42px] md:text-[40px] md:leading-[48.41px] lg:text-[56px] lg:leading-[67.77px]">
-              {time_zone}
+              {name}
             </div>
           </div>
           <div className="flex justify-between md:inline ">

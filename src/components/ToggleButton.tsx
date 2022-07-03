@@ -1,4 +1,4 @@
-import { openProps } from "../App";
+import { openProps } from "../type";
 
 export default function Toggle({ open, setOpen }: openProps) {
   return (

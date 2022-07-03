@@ -1,5 +1,5 @@
 import ToggleButton from "./ToggleButton";
-import { mainPropsDate, mainPropsPlace, openProps, hour } from "../App";
+import { mainPropsDate, mainPropsPlace, openProps, hour } from "../type";
 
 export const MainPage = ({
   datetime,
